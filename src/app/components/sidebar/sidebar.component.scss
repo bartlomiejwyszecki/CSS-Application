@@ -1,35 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
-.wrapper {
-    display: flex;
-    position: relative;
     .sidebar {
-        position: fixed;
         height: 100%;
-        width: 260px;
         color: #fafafa;
-        background: linear-gradient(0deg, rgba(239,83,80,1) 0%, rgba(183,28,28,1) 100%);
+        padding-top: 2vh;
+        background: linear-gradient(0deg, rgba(0,105,92,1) 0%, rgba(38,166,154,1) 100%);
         h2 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 3em;
             text-align: center;
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
         }
-        ul li {
-            padding: 0.9em;
+        ul {
+            margin-top: 0px;
+            li {
+            padding: 1.5em;
+            width: 100%;
+            }
+            li:hover {
+                background: #4db6ac;
+            }
         }
         a {
             text-decoration: none;
-            color: #fafafa;
+            color: #eeeeee;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            font-weight: 500;
             font-size: 1.1em;
+            width: 100%;
             span {
-                padding: 0.9em;
+                padding: 0.5em;
             }
         }
         i {
             padding: 1em;
         }
+        a:hover {
+            color: #212121;
+        }
+        a:active {
+            font-weight: 600;
+        }
+    }
+
+
+@media only screen and (min-width: 1200px) {
+    .sidebar {
+        width: 15vw;
+    }
+    h2.sd {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .sidebar {
+        width: 17vw;
+        h2 {
+        font-size: 2.6em;
+        }
+        h2.sd {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .sidebar {
+        width: 20vw;
+        h2 {
+            font-size: 2.2em;
+        }
+        h2.sd {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+        width: 12vw;
+    }
+    a {
+        span {
+            display: none;
+        }
+    }
+    h2 {
+        margin: 10px auto 10px auto;
+        font-size: 2.5em;
+    }
+    h2.md {
+        display: none;
     }
 }
