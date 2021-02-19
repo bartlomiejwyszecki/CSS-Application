@@ -1,6 +1,5 @@
-    <div class="sidebar">
-        <h2 class="md">Sidebar</h2>
-        <h2 class="sd">S.</h2>
+    <div id="sidebar" [ngClass]="{'active' : toggler }"> <!-- class="active" -->
+        <h2 class="md">S<span>idebar</span>.</h2>
         <ul>
             <li class="waves-effect waves-light"><a href="#"><i class="fas fa-home fa-lg"></i><span>Home</span></a></li>
             <li class="waves-effect waves-light"><a href="#"><i class="fas fa-shapes fa-lg"></i><span>Shape generator</span></a></li>

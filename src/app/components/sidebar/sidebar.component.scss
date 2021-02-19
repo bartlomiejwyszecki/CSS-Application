@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
-    .sidebar {
+    #sidebar {
         height: 100%;
         color: #fafafa;
         padding-top: 2vh;
-        background: linear-gradient(0deg, rgba(0,105,92,1) 0%, rgba(38,166,154,1) 100%);
+        transition: 1s;
+        background: linear-gradient(171deg, rgba(0,77,64,1) 0%, rgba(0,121,107,1) 30%, rgba(0,121,107,1) 70%, rgba(0,150,136,1));
         h2 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
@@ -12,6 +13,11 @@
             width: 85%;
             margin-left: auto;
             margin-right: auto;
+            transition: 1s;
+            font-size: 3em;
+        }
+        h2.sd {
+            display: none;
         }
         ul {
             margin-top: 0px;
@@ -20,7 +26,7 @@
             width: 100%;
             }
             li:hover {
-                background: #4db6ac;
+                background: #26a69a;
             }
         }
         a {
@@ -39,6 +45,7 @@
         }
         a:hover {
             color: #212121;
+            transition: all 0.5s;
         }
         a:active {
             font-weight: 600;
@@ -47,52 +54,107 @@
 
 
 @media only screen and (min-width: 1200px) {
-    .sidebar {
-        width: 15vw;
+    #sidebar {
+        width: 17vw;
     }
-    h2.sd {
-        display: none;
+    .active {
+        width: 5vw !important;
+        li {
+            text-align: center;
+        }
+        a {
+            span {
+                display: none;
+            }
+        }
+        h2 {
+            margin: 10px auto 10px auto;
+            font-size: 2.5em;
+            span {
+                display: none;
+            }
+        }
     }
 }
 
-@media only screen and (min-width: 992px) {
-    .sidebar {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #sidebar {
         width: 17vw;
         h2 {
         font-size: 2.6em;
         }
-        h2.sd {
-            display: none;
+    }
+    .active {
+        width: 6vw !important;
+        li {
+            text-align: center;
+        }
+        a {
+            span {
+                display: none;
+            }
+        }
+        h2 {
+            margin: 10px auto 10px auto;
+            font-size: 2.5em;
+            span {
+                display: none;
+            }
         }
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .sidebar {
-        width: 20vw;
+    #sidebar {
+        width: 25vw;
         h2 {
             font-size: 2.2em;
         }
-        h2.sd {
-            display: none;
+    }
+    .active {
+        width: 8vw !important;
+        li {
+            text-align: center;
+        }
+        a {
+            span {
+                display: none;
+            }
+        }
+        h2 {
+            margin: 10px auto 10px auto;
+            font-size: 2.5em;
+            span {
+                display: none;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .sidebar {
-        width: 12vw;
-    }
-    a {
-        span {
-            display: none;
+    #sidebar {
+        width: 33vw;
+        h2 {
+            font-size: 2.2em;
         }
     }
-    h2 {
-        margin: 10px auto 10px auto;
-        font-size: 2.5em;
-    }
-    h2.md {
-        display: none;
+    .active {
+        width: 13vw !important;
+        li {
+            text-align: center;
+        }
+        a {
+            font-size: 0.5em;
+            span {
+                display: none;
+            }
+        }
+        h2 {
+            margin: 10px auto 10px auto;
+            font-size: 2.1em;
+            span {
+                display: none;
+            }
+        }
     }
 }
