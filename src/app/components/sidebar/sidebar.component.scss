@@ -5,6 +5,8 @@
         color: #fafafa;
         padding-top: 2vh;
         transition: 1s;
+        -webkit-box-shadow: 5px 0px 35px -12px rgba(66,66,66,0.9); 
+        box-shadow: 5px 0px 35px -12px rgba(66,66,66,0.9);
         background: linear-gradient(171deg, rgba(0,77,64,1) 0%, rgba(0,121,107,1) 30%, rgba(0,121,107,1) 70%, rgba(0,150,136,1));
         h2 {
             font-family: 'Montserrat', sans-serif;
@@ -13,8 +15,8 @@
             width: 85%;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 10px;
             transition: 1s;
-            font-size: 3em;
         }
         h2.sd {
             display: none;
@@ -34,7 +36,6 @@
             color: #eeeeee;
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
-            font-size: 1.1em;
             width: 100%;
             span {
                 padding: 0.5em;
@@ -56,6 +57,12 @@
 @media only screen and (min-width: 1200px) {
     #sidebar {
         width: 17vw;
+        ul li a {
+            font-size: 1.1em;
+        }
+        h2 {
+            font-size: 2.8em;
+        }
     }
     .active {
         width: 5vw !important;
@@ -68,8 +75,6 @@
             }
         }
         h2 {
-            margin: 10px auto 10px auto;
-            font-size: 2.5em;
             span {
                 display: none;
             }
@@ -79,9 +84,12 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     #sidebar {
-        width: 17vw;
+        width: 18vw;
+        ul li a {
+            font-size: 1.1em;
+        }
         h2 {
-        font-size: 2.6em;
+        font-size: 2.2em;
         }
     }
     .active {
@@ -107,6 +115,9 @@
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     #sidebar {
         width: 25vw;
+        ul li a {
+            font-size: 1.1em;
+        }
         h2 {
             font-size: 2.2em;
         }
@@ -133,9 +144,12 @@
 
 @media only screen and (max-width: 768px) {
     #sidebar {
-        width: 33vw;
+        width: 30vw;
+        ul li a {
+            font-size: 1em;
+        }
         h2 {
-            font-size: 2.2em;
+            font-size: 2em;
         }
     }
     .active {
@@ -144,7 +158,6 @@
             text-align: center;
         }
         a {
-            font-size: 0.5em;
             span {
                 display: none;
             }

@@ -9,20 +9,58 @@
     }
     .main {
         height: 100%;
-        background: orange;
         flex-grow: 1;
         display: flex;
         .left {
-            a {
-                padding-left: 1.5em;
-                padding-right: 1.5em;
-                color: white;
+            .toggler {
+                -webkit-box-shadow: 5px 0px 35px -12px #212121; 
+                box-shadow: 0px 0px 15px -2px #212121;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                background: rgb(0,77,64);
+                background: linear-gradient(171deg, rgba(0,77,64,1) 0%, rgba(0,121,107,1) 100%);
+                color: #eeeeee;
+                transition: 1s ease-in-out;
+                text-align: center;
+                .icon {
+                    position: relative;
+                    top: 52%;
+                    left: 49%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+            .toggler.active {
+                transform: rotate(180deg);
+                transition: 1s ease-in-out;
             }
         }
         .router {
-            flew-grow: 1;
-            background: red;
+            flex-grow: 1 auto;
             width: 100%;
         }
     }
+}
+
+@media only screen and (min-width: 1200px) {
+    .left {
+        padding-top: 30px;
+        padding-left: 3px;
+        padding-right: 1vw;
+        .toggler {
+            width: 35px;
+            height: 35px;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+
 }

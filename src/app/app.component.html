@@ -5,9 +5,11 @@
 
     <div class="main">
       <div class="left">
-        <a class="waves-effect waves-light btn" (click)="toggle = !toggle">
-          <i class="fas fa-align-left fa-lg"></i>
-        </a>
+        <div class="toggler" (click)="toggle = !toggle" [ngClass]="{'active' : toggle }">
+          <div class="icon">
+            <i class="fas fa-chevron-left fa-lg"></i>
+          </div>
+        </div>
       </div>
       <div class="router">
         <app-home></app-home>
