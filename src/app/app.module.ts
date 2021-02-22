@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './components/home/home.component';
+import { ShapeGeneratorComponent } from './components/shape-generator/shape-generator.component';
+import { GradientGeneratorComponent } from './components/gradient-generator/gradient-generator.component';
+import { BannerGeneratorComponent } from './components/banner-generator/banner-generator.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    HomeComponent
+    HomeComponent,
+    ShapeGeneratorComponent,
+    GradientGeneratorComponent,
+    BannerGeneratorComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

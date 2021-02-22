@@ -3,16 +3,18 @@
       <app-sidebar [toggler]="toggle"></app-sidebar>
     </div>
 
-    <div class="main">
-      <div class="left">
+    <div class="container-fluid">
+      <div class="row col-12">
         <div class="toggler" (click)="toggle = !toggle" [ngClass]="{'active' : toggle }">
-          <div class="icon">
-            <i class="fas fa-chevron-left fa-lg"></i>
-          </div>
+          <a class="waves-effect waves-light btn">
+             <i class="fas fa-bars"></i><span>Toggle</span>
+          </a>
         </div>
       </div>
-      <div class="router">
-        <app-home></app-home>
+      <div class="row col-12">
+        <div class="router">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
 </div>

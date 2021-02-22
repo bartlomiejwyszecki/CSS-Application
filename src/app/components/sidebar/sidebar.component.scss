@@ -33,7 +33,7 @@
             text-decoration: none;
             color: #eeeeee;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
+            font-weight: 600;
             width: 100%;
             span {
                 padding: 0.7em;
@@ -43,11 +43,16 @@
             padding: 1em;
         }
         a:hover {
-            color: #212121;
+            color: #004d40;
             transition: all 0.5s;
         }
-        a:active {
-            font-weight: 600;
+        .activeRoute {
+            transition: all 0.3s;
+            border-left: 4px solid #eeeeee;
+            background:  #26a69a;
+            a {
+                color: #004d40;
+            }
         }
     }
     .active {
@@ -59,18 +64,18 @@
         width: 17vw;
         ul {
             li {      
-                padding: 1.2em;
+                padding: 1.1em;
                 a {
-                    font-size: 1.1em;
+                    font-size: 1em;
                 }
             }
         }
         h2 {
-            font-size: 2.8em;
+            font-size: 2.4em;
         }
     }
     .active {
-        width: 5vw !important;
+        width: 4vw !important;
         li {
             text-align: center;
         }
@@ -92,7 +97,7 @@
         width: 18vw;
         ul {
             li {      
-                padding: 1.1em;
+                padding: 0.9em;
                 a {
                     font-size: 1em;
                 }
@@ -103,7 +108,7 @@
         }
     }
     .active {
-        width: 6vw !important;
+        width: 5vw !important;
         li {
             text-align: center;
         }
