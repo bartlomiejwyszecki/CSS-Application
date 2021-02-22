@@ -4,8 +4,6 @@
     align-content: flex-start;
     .side {
         height: 100%;
-        background: yellow;
-        transition: 5s;
     }
     .main {
         height: 100%;
@@ -24,8 +22,8 @@
                 text-align: center;
                 .icon {
                     position: relative;
-                    top: 52%;
-                    left: 49%;
+                    top: 49%;
+                    left: 48%;
                     transform: translate(-50%,-50%);
                 }
             }
@@ -54,13 +52,40 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-
+    .left {
+        padding-top: 25px;
+        padding-left: 3px;
+        padding-right: 5px;
+        .toggler {
+            width: 30px;
+            height: 30px;
+            font-size: 0.9em;
+        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-
+    .left {
+        padding-top: 25px;
+        padding-left: 3px;
+        padding-right: 1vw;
+        .toggler {
+            width: 30px;
+            height: 30px;
+            font-size: 0.9em;
+        }
+    }
 }
 
 @media only screen and (max-width: 768px) {
-
+    .left {
+        padding-top: 25px;
+        padding-left: 2px;
+        padding-right: 1vw;
+        .toggler {
+            width: 25px;
+            height: 25px;
+            font-size: 0.8em;
+        }
+    }
 }
