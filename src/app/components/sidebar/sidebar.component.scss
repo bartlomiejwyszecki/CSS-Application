@@ -12,12 +12,11 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             text-align: center;
-            width: 85%;
             margin-left: auto;
             margin-right: auto;
             margin-top: 10px;
             transition: 1s;
-            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+            font-size: clamp(1.8rem, 2.5vw, 2.1rem);
         }
         h2.sd {
             display: none;
@@ -33,7 +32,7 @@
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 600;
                 width: 100%;
-                font-size: clamp(0.9em, 2.5vw, 1.05em);
+                font-size: clamp(0.9em, 2.5vw, 1em);
                 span {
                     padding: 0.7em;
                 }

@@ -1,2 +1,66 @@
 .container {
+    h2 {
+        font-weight: 800;
+        font-size: clamp(1.8em, 5vw, 2em);
+    }
+    h4 {
+        font-weight: 700;
+        font-size: clamp(1.1em, 3vw, 1.3em);
+        padding: 1.6em 0 0 0;
+    }
+    p {
+        line-height: 1.8;
+        font-weight: 300;
+        font-size: 1em;
+        span {
+            font-weight: 700;
+        }
+    }
+    ul {
+        margin-top: -5px;
+        li {
+            padding: 0.2em 0 0.2em 1em;
+            font-weight: 300;
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        width: 110%;
+        .icon {
+            width: 4rem;
+            height: 4rem;
+            font-size: 4em;
+            padding: 0 2em 1.5em 0;
+        }
+        .icon.ts {
+            width: 4rem;
+            height: 4rem;
+            font-size: 3.4em;
+            padding-top: 12px;
+        }
+        .fa-angular:hover, .fa-angular:active {
+            color: #dd1b16;
+            transition: 0.3s;
+        }
+        .fa-sass:hover, .fa-sass:active {
+            color: #cd6799;
+            transition: 0.3s;
+        }
+        .fa-bootstrap:hover, .fa-bootstrap:active {
+            color: #563d7c;
+            transition: 0.3s;
+        }
+        .fa-font-awesome:hover, .fa-font-awesome:active {
+            color: #228ae6;
+            transition: 0.3s;
+        }
+        .icon.ts:hover {
+            color: #007acc;
+            transition: 0.3s;
+        }
+    }
 }
