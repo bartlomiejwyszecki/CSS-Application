@@ -17,6 +17,7 @@
             margin-right: auto;
             margin-top: 10px;
             transition: 1s;
+            font-size: clamp(1.8rem, 2.5vw, 2.2rem);
         }
         h2.sd {
             display: none;
@@ -24,171 +25,79 @@
         ul {
             li {
             width: 100%;
+            padding: clamp(0.7em, 1.2vw, 1em);
+            }
+            a {
+                text-decoration: none;
+                color: #eeeeee;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                width: 100%;
+                font-size: clamp(0.9em, 2.5vw, 1.05em);
+                span {
+                    padding: 0.7em;
+                }
+                i {
+                    padding: 1em;
+                }
+            }
+            a:hover {
+                color: #004d40;
+                transition: all 0.5s;
+            }
+            .activeRoute {
+                transition: all 0.3s;
+                border-left: 4px solid #eeeeee;
+                background:  #26a69a;
+                a {
+                    color: #004d40;
+                }
             }
             li:hover {
                 background: #26a69a;
             }
         }
-        a {
-            text-decoration: none;
-            color: #eeeeee;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            width: 100%;
-            span {
-                padding: 0.7em;
-            }
-        }
-        i {
-            padding: 1em;
-        }
-        a:hover {
-            color: #004d40;
-            transition: all 0.5s;
-        }
-        .activeRoute {
-            transition: all 0.3s;
-            border-left: 4px solid #eeeeee;
-            background:  #26a69a;
-            a {
-                color: #004d40;
-            }
-        }
     }
     .active {
-        ul li { text-align: center; }
+        li { text-align: center; }
+        span { display: none; }
     }
 
 @media only screen and (min-width: 1200px) {
     #sidebar {
         width: 17vw;
-        ul {
-            li {      
-                padding: 1.1em;
-                a {
-                    font-size: 1em;
-                }
-            }
-        }
-        h2 {
-            font-size: 2.4em;
-        }
     }
     .active {
         width: 4vw !important;
-        li {
-            text-align: center;
-        }
-        a {
-            span {
-                display: none;
-            }
-        }
-        h2 {
-            span {
-                display: none;
-            }
-        }
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     #sidebar {
         width: 18vw;
-        ul {
-            li {      
-                padding: 0.9em;
-                a {
-                    font-size: 1em;
-                }
-            }
-        }
-        h2 {
-        font-size: 2.2em;
-        }
     }
     .active {
         width: 5vw !important;
-        li {
-            text-align: center;
-        }
-        a {
-            span {
-                display: none;
-            }
-        }
-        h2 {
-            margin: 10px auto 10px auto;
-            font-size: 2.5em;
-            span {
-                display: none;
-            }
-        }
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     #sidebar {
         width: 25vw;
-        ul {
-            li {      
-                padding: 1em;
-                a {
-                    font-size: 1em;
-                }
-            }
-        }
-        h2 {
-            font-size: 2.2em;
-        }
     }
     .active {
         width: 8vw !important;
-        li {
-            text-align: center;
-        }
-        a {
-            span {
-                display: none;
-            }
-        }
-        h2 {
-            margin: 10px auto 10px auto;
-            font-size: 2.5em;
-            span {
-                display: none;
-            }
-        }
     }
 }
 
 @media only screen and (max-width: 768px) {
     #sidebar {
         width: 27vw;
-        ul {
-            li {      
-                padding: 0.8em;
-                a {
-                    font-size: 1em;
-                }
-            }
-        }
         h2 {
-            font-size: 1.8em;
+            margin: 5px auto 15px auto;
         }
     }
     .active {
         width: 9vw !important;
-        a {
-            text-align: center;
-            span {
-                display: none;
-            }
-        }
-        h2 {
-            span {
-                display: none;
-            }
-        }
     }
 }
