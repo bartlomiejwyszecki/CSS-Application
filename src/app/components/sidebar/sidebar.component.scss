@@ -16,7 +16,7 @@
             margin-right: auto;
             margin-top: 10px;
             transition: 1s;
-            font-size: clamp(1.8rem, 2.5vw, 2.1rem);
+            font-size: clamp(1.5rem, 2.6vw, 2.1rem);
         }
         h2.sd {
             display: none;
@@ -24,7 +24,7 @@
         ul {
             li {
             width: 100%;
-            padding: clamp(0.7em, 1.2vw, 1em);
+            padding: clamp(0.4em, 2vw, 1em);
             }
             a {
                 text-decoration: none;
@@ -34,7 +34,7 @@
                 width: 100%;
                 font-size: clamp(0.9em, 2.5vw, 1em);
                 span {
-                    padding: 0.7em;
+                    padding: 0.7em 0.7em 0.7em 1em;
                 }
                 i {
                     padding: 1em;
@@ -54,6 +54,22 @@
             }
             li:hover {
                 background: #26a69a;
+            }
+        }
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 0.6em;
+            color: #80cbc4;
+            transition: 1s;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            border-top: 1px dashed #26a69a;
+            padding-top: 10px;
+            span {
+                transition: 1s;
             }
         }
     }
@@ -89,14 +105,28 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     #sidebar {
         width: 27vw;
-        h2 {
-            margin: 5px auto 15px auto;
-        }
     }
     .active {
         width: 9vw !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #sidebar {
+        width: 42vw;
+        ul {
+            .activeRoute {
+                border-left: 3px solid #eeeeee;
+            }
+        }
+    }
+    .active {
+        width: 11vw !important;
+    }
+    .activeRoute {
+        border-left: 2px solid #eeeeee;
     }
 }
