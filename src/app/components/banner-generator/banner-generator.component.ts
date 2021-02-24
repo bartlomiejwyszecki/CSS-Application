@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { Font, FONTS } from './assets/fonts';
 
 @Component({
@@ -29,5 +29,5 @@ export class BannerGeneratorComponent implements DoCheck {
     if (this.font) {
       this.id = this.fonts.find(f => f.name === this.font).id;
     }
-  }
+  } 
 }

@@ -23,10 +23,9 @@
         </div>
         <div class="form-group">
             <label for="sel1">Font-weight:</label>
-            <select class="form-control" id="sel1" [(ngModel)]="fontWeight">
+            <select class="form-control" id="sel1" [(ngModel)]="fontWeight" [disabled]="!font">
                 <ng-container *ngIf="id">
-                    <option selected>Poppins</option>
-                    <option *ngFor="let w of fonts[id].weights">{{ w }}</option>
+                    <option *ngFor="let w of fonts[id-1].weights">{{ w }}</option>
                 </ng-container>
             </select>
         </div>
