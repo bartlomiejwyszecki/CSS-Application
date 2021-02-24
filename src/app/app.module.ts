@@ -10,6 +10,7 @@ import { ShapeGeneratorComponent } from './components/shape-generator/shape-gene
 import { GradientGeneratorComponent } from './components/gradient-generator/gradient-generator.component';
 import { BannerGeneratorComponent } from './components/banner-generator/banner-generator.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

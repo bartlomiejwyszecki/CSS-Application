@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $poppins: 'Poppins', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
 $black: #212121;
 
 .flexbox {
-    height: 100%;
     display: flex;
     align-content: flex-start;
-    background: #eeeeee;
     .side {
         height: 100%;
         position: fixed;
@@ -17,7 +15,6 @@ $black: #212121;
     .container-fluid {
         padding-top: 15px;
         transition: 1s;
-        min-height: 100vh;
         height: auto;
         .toggler {
             position: fixed;
@@ -40,7 +37,7 @@ $black: #212121;
         .router {
             font-family: $poppins;
             color: $black;
-            margin-top: 20px;
+            margin-top: 50px;
         }
     }
     .container-fluid.active {

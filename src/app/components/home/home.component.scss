@@ -1,5 +1,7 @@
 .container {
     padding: 0px;
+    width: 100%;
+    max-width: 700px;
     h2 {
         font-weight: 800;
         font-size: clamp(1.8em, 5vw, 2em);
