@@ -28,7 +28,7 @@ export class BannerGeneratorComponent implements DoCheck {
   colorsToggler2 = true;
 
   //Font variables
-  font = 'Poppins';
+  font;
   id;
   fontSize = 24;
   fontWeight;

@@ -1,1 +1,66 @@
-<p>shape-generator works!</p>
+<div class="container-fluid">
+
+    <div class="shape">
+        <div class="content" [ngStyle]="getShape()" #shape></div>
+    </div>
+
+    <div class="settings">
+
+        <div class="method">
+            <h4>Choose method:</h4>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" 
+                    (change)="firstCheck = !firstCheck" [disabled]="secondCheck" checked>
+                <label class="form-check-label" for="flexCheckDefault">
+                Circle/circle edges
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" 
+                    (change)="secondCheck = !secondCheck" [disabled]="firstCheck">
+                <label class="form-check-label" for="flexCheckChecked">
+                Other shapes
+                </label>
+            </div>
+        </div>
+
+        <div class="firstMethod" *ngIf="firstCheck">
+            <label for="customRange2" class="form-label">Width: {{ width }}px</label>
+            <input type="range" class="form-range" min="0" max="1000" step="20" id="customRange2" [(ngModel)]="width">
+
+            <label for="customRange2" class="form-label">Height: {{ height }}px</label>
+            <input type="range" class="form-range" min="0" max="1000" step="20" id="customRange2" [(ngModel)]="height">
+
+            <label for="customRange2" class="form-label">Border-radius (top-left corner): {{ topLeftRadius }}px</label>
+            <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topLeftRadius">
+
+            <label for="customRange2" class="form-label">Border-radius (top-right corner): {{ topRightRadius }}px</label>
+            <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topRightRadius">
+
+            <label for="customRange2" class="form-label">Border-radius (bottom-right): {{ bottomRightRadius }}px</label>
+            <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomRightRadius">
+
+            <label for="customRange2" class="form-label">Border-radius (bottom-left): {{ bottomLeftRadius }}px</label>
+            <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomLeftRadius">
+
+            <h3>Your code:</h3>
+            <div class="code">
+                <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
+                    <span class="property">width: </span>{{ width }}px; <br />
+                    <span class="property">height: </span>{{ height }}px; <br />
+                    <span class="property">border-radius: </span>{{ topLeftRadius }}px {{ topRightRadius }}px 
+                        {{ bottomRightRadius}}px {{ bottomLeftRadius }}px; <br />
+                &#125;
+                </article>
+            </div>
+        </div>
+
+        <div class="secondMethod" *ngIf="secondCheck">
+            <h3>In building :(</h3>
+        </div>
+
+    </div>
+
+</div>
