@@ -44,5 +44,14 @@
         input {
             margin-top: 0px;
         }
+        .colors {
+            display: flex;
+            flex-wrap: wrap;
+            .color {
+                width: 25px;
+                height: 25px;
+                margin: 3px;
+            }
+        }
     }
 }

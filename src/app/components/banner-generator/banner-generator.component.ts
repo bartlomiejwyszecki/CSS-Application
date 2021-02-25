@@ -1,5 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
 import { Font, FONTS } from './assets/fonts';
+import { COLORS } from './assets/colors';
 
 @Component({
   selector: 'app-banner-generator',
@@ -14,6 +15,7 @@ export class BannerGeneratorComponent implements DoCheck {
   fontSize = 24;
   fontWeight;
   fonts: Font[] = FONTS;
+  colors: string[] = COLORS;
 
   getBannerStyles() {
     return {

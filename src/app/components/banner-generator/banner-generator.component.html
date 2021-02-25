@@ -21,6 +21,7 @@
               <option *ngFor="let f of fonts" [style.fontFamily]="f.description">{{ f.name }}</option>
             </select>
         </div>
+
         <div class="form-group">
             <label for="sel1">Font-weight:</label>
             <select class="form-control" id="sel1" [(ngModel)]="fontWeight" [disabled]="!font">
@@ -28,6 +29,11 @@
                     <option *ngFor="let w of fonts[id-1].weights">{{ w }}</option>
                 </ng-container>
             </select>
+        </div>
+
+        <label class="form-label">Color 1:</label>
+        <div class="colors">
+            <div class="color" *ngFor="let c of colors" [style.background]="c"></div>
         </div>
     </div>
 </div>
