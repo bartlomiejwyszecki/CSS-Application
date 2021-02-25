@@ -2,63 +2,48 @@
 
 .container-fluid {
     max-width: 100%;
-    .shape {
-        display: flex;
-        justify-content: center;
-        max-width: 100%;
+    .method {
         margin-bottom: 50px;
-    }
-    .settings {
-        .method {
-            width: 100%;
-            padding-bottom: 2em;
-            .form-label {
-                width: 100%;
+        h4 {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #212121;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                display: inline-flex;
+                a {
+                    text-decoration: none;
+                    color: #212121;
+                    font-weight: 500;
+                    font-size: 1em;
+                    display: inline-flex;
+                    padding: 0.5em 1em 0.5em 1em;
+                    span {
+                        padding-right: 0.5em;
+                    }
+                }
+                .active {
+                    color: #0277bd;
+                }
             }
-            div {
-                display: inline;
+            .whenActive {
+                display: none;
             }
-            h4 {
-                font-size: 0.9em;
-                font-weight: 500;
-                margin-bottom: 15px;
-                color: #616161;
+            .nonActive {
+                display: block;
+            }
+            .active {
+                .whenActive {
+                    color: #0277bd;
+                    display: block;
+                }
+                .nonActive {
+                    display: none;
+                }
             }
         }
-        .form-label, label {
-            font-size: 0.9em;
-            font-weight: 500;
-            margin-bottom: 0px;
-            color: #616161;
-        }
-    }
-    .code {
-        background-color: #212121;
-        border-radius: 10px;
-        padding: 1.5em;
-        margin-bottom: 2em;
-        color: #eeeeee;
-        font-family: 'Ubuntu', sans-serif;
-        font-weight: 500;
-        .dot {
-            color: #64b5f6;
-        }
-        .className {
-            color: #ff9100;
-            padding-right: 0.5em;
-        }
-        .property {
-            color: #f48fb1;
-            padding: 0.1em 0.3em 0.1em 1.5em;
-        }
-    }
-    h3 {
-        font-size: 1.4em;
-        font-weight: 700;
-        margin-top: 40px;
-        padding-top: 40px;
-        margin-bottom: 10px;
-        border-top: 2px dashed #bdbdbd;
-        color: #212121;
     }
 }

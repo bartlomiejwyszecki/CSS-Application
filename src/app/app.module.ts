@@ -11,6 +11,8 @@ import { GradientGeneratorComponent } from './components/gradient-generator/grad
 import { BannerGeneratorComponent } from './components/banner-generator/banner-generator.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CircleShapesComponent } from './components/shape-generator/circle-shapes/circle-shapes.component';
+import { TriangleShapesComponent } from './components/shape-generator/triangle-shapes/triangle-shapes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShapeGeneratorComponent,
     GradientGeneratorComponent,
     BannerGeneratorComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CircleShapesComponent,
+    TriangleShapesComponent
   ],
   imports: [
     BrowserModule,
