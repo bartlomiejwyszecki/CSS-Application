@@ -40,3 +40,12 @@ export const COLORS = [
     //Black and White
     "000000", "ffffff"
 ]
+
+export const FONTCOLORS = [
+    //Grey
+    "#fafafa", "#f5f5f5", "#eeeeee", "#e0e0e0", "#bdbdbd", "#9e9e9e", "#757575", "#616161", "#424242", "#212121", 
+    //Blue Grey
+    "#eceff1", "#cfd8dc", "#b0bec5", "#90a4ae", "#78909c", "#607d8b", "#546e7a", "#455a64", "#37474f", "#263238",
+    //Black and White
+    "000000", "ffffff"
+]

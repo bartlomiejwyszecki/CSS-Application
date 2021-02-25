@@ -1,7 +1,10 @@
 <div class="container-fluid">
+
+    <!-- Banner -->
+
     <div class="banner">
         <div class="content" [ngStyle]="getBannerStyles()" #banner>
-            <span>Tu będzie tekst</span>
+            <span contenteditable="true">Tu wpisz swój tekst</span>
         </div>
     </div>
 
@@ -19,60 +22,92 @@
 
         <!-- Colors -->
 
-        <div class="colorsLabel">
-            <label class="form-label">Color 1:</label>
-            <div class="colorToggler">Toggle
-                <div class="button" [ngClass]="{'activated' : colorsToggler }">
-                    <a class="waves-effect waves-light" (click)="colorsToggler = !colorsToggler"><i class="fas fa-arrow-alt-circle-up"></i></a>
+        <div class="colorsSection" style="border-top: 2px dashed #e0e0e0; margin-top: 20px; padding-top: 20px;">
+
+            <!-- Color1 -->
+
+            <div class="colorsLabel">
+                <label class="form-label">Color 1: {{ color1 }}</label>
+                <div class="colorToggler">Toggle
+                    <div class="button" [ngClass]="{'activated' : colorsToggler }">
+                        <a class="waves-effect waves-light" (click)="colorsToggler = !colorsToggler"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="colorsContainer" [ngClass]="{'activated' : colorsToggler }">
-            <label for="customRange2" class="form-label">Color 1 percentage: {{ percentage1 }}%</label>
-            <input type="range" class="form-range" min="0" max="100" step="1" id="customRange2" [(ngModel)]="percentage1">
 
-            <div class="colors">
-                <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="color1 = c"></div>
-            </div>
-        </div>
+            <div class="colorsContainer" [ngClass]="{'activated' : colorsToggler }">
+                <label for="customRange2" class="form-label">Color 1 percentage: {{ percentage1 }}%</label>
+                <input type="range" class="form-range" min="0" max="100" step="1" id="customRange2" [(ngModel)]="percentage1">
 
-        <div class="colorsLabel" style="padding-top: 20px;">
-            <label class="form-label">Color 2:</label>
-            <div class="colorToggler">Toggle
-                <div class="button" [ngClass]="{'activated' : colorsToggler2 }">
-                    <a class="waves-effect waves-light" (click)="colorsToggler2 = !colorsToggler2"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                <div class="colors">
+                    <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="color1 = c"></div>
                 </div>
             </div>
-        </div>
 
-        <div class="colorsContainer" [ngClass]="{'activated' : colorsToggler2 }">
-            <label for="customRange2" class="form-label">Color 2 percentage: {{ percentage2 }}%</label>
-            <input type="range" class="form-range" min="0" max="100" step="1" id="customRange2" [(ngModel)]="percentage2">
-            
-            <div class="colors">
-                <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="color2 = c"></div>
+                <!-- Color2 -->
+
+            <div class="colorsLabel" style="padding-top: 20px;">
+                <label class="form-label">Color 2: {{ color2 }}</label>
+                <div class="colorToggler">Toggle
+                    <div class="button" [ngClass]="{'activated' : colorsToggler2 }">
+                        <a class="waves-effect waves-light" (click)="colorsToggler2 = !colorsToggler2"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colorsContainer" [ngClass]="{'activated' : colorsToggler2 }">
+                <label for="customRange2" class="form-label">Color 2 percentage: {{ percentage2 }}%</label>
+                <input type="range" class="form-range" min="0" max="100" step="1" id="customRange2" [(ngModel)]="percentage2">
+
+                <div class="colors">
+                    <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="color2 = c"></div>
+                </div>
             </div>
         </div>
 
         <!-- Font ranges -->
 
-        <label for="customRange2" class="form-label" style="margin-top: 20px;">Font size: {{ fontSize }}px</label>
-        <input type="range" class="form-range" min="2" max="72" step="2" id="customRange2" [(ngModel)]="fontSize">
+        <div class="fontSection" style="border-top: 2px dashed #e0e0e0; margin-top: 20px;">
+            <label for="customRange2" class="form-label" style="margin-top: 20px;">Font size: {{ fontSize }}px</label>
+            <input type="range" class="form-range" min="2" max="72" step="2" id="customRange2" [(ngModel)]="fontSize">
         
-        <div class="form-group">
-            <label for="sel1">Font-family: </label>
-            <select class="form-control" id="sel1" [(ngModel)]="font">
-              <option *ngFor="let f of fonts" [style.fontFamily]="f.description">{{ f.name }}</option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label for="sel1">Font-family: </label>
+                <select class="form-control" id="sel1" [(ngModel)]="font">
+                <option *ngFor="let f of fonts" [style.fontFamily]="f.description">{{ f.name }}</option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <label for="sel1">Font-weight:</label>
-            <select class="form-control" id="sel1" [(ngModel)]="fontWeight" [disabled]="!font">
-                <ng-container *ngIf="id">
-                    <option *ngFor="let w of fonts[id-1].weights">{{ w }}</option>
-                </ng-container>
-            </select>
+            <div class="form-group">
+                <label for="sel1">Font-weight:</label>
+                <select class="form-control" id="sel1" [(ngModel)]="fontWeight" [disabled]="!font">
+                    <ng-container *ngIf="id">
+                        <option *ngFor="let w of fonts[id-1].weights">{{ w }}</option>
+                    </ng-container>
+                </select>
+            </div>
+
+                <!-- Font color -->
+
+            <div class="colorsLabel">
+                <label class="form-label">Font color: {{ fontColor }}</label>
+                <div class="colorToggler">Toggle
+                    <div class="button" [ngClass]="{'activated' : fontColorToggler }">
+                        <a class="waves-effect waves-light" (click)="fontColorToggler = !fontColorToggler"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colorsContainer" [ngClass]="{'activated' : fontColorToggler }">
+                <div class="colors">
+                    <div class="color" *ngFor="let c of fontColors" [style.background]="c" (click)="fontColor = c"></div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <div class="download">
+        <h4>Click below to download your banner!</h4>
+        <a class="waves-effect waves-light btn" (click)="saveImage(banner)"><i class="fas fa-download"></i><span>Download</span></a>
     </div>
 </div>
