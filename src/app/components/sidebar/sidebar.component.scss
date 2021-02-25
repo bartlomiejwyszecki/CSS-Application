@@ -15,11 +15,20 @@
             margin-left: auto;
             margin-right: auto;
             margin-top: 10px;
+            padding: 0 0 0.7em 0;
             transition: 1s;
-            font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+            font-size: clamp(1.4rem, 2.6vw, 2rem);
+            border-bottom: 2px dashed #00897b;
         }
         h2.sd {
             display: none;
+        }
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.8em;
+            color: #e0f2f1;
+            text-align: center;
         }
         ul {
             li {
@@ -30,7 +39,7 @@
                 text-decoration: none;
                 color: #eeeeee;
                 font-family: 'Montserrat', sans-serif;
-                font-weight: 600;
+                font-weight: 500;
                 width: 100%;
                 font-size: clamp(0.9em, 2.5vw, 1em);
                 span {
@@ -76,6 +85,13 @@
     .active {
         li { text-align: center; }
         span { display: none; }
+        h3 { display: none; }
+        .first {
+            margin-top: -1.4em;
+            margin-bottom: 0;
+            padding-bottom: -10px;
+            border-bottom: 2px dashed #009688;
+        }
     }
 
 @media only screen and (min-width: 1200px) {

@@ -1,8 +1,12 @@
     <div id="sidebar" [ngClass]="{'active' : toggler }"> <!-- class="active" -->
 
         <h2 class="md">S<span>idebar</span>.</h2>
-        <ul>
+        <h3>DASHBOARD</h3>
+        <ul class="first">
             <li class="waves-effect waves-light" routerLink="/home" routerLinkActive="activeRoute"><a><i class="fas fa-home fa-lg"></i><span>Home</span></a></li>
+        </ul>
+        <h3>TOOLS</h3>
+        <ul>
             <li class="waves-effect waves-light" routerLink="/shape-generator" routerLinkActive="activeRoute"><a><i class="fas fa-shapes fa-lg"></i><span>Shape generator</span></a></li>
             <li class="waves-effect waves-light" routerLink="/gradient-generator" routerLinkActive="activeRoute"><a><i class="fas fa-palette fa-lg"></i><span>Gradient generator</span></a></li>
             <li class="waves-effect waves-light" routerLink="/banner-generator" routerLinkActive="activeRoute"><a><i class="fas fa-spray-can fa-lg"></i><span>Banner generator</span></a></li>
