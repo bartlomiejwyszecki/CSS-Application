@@ -8,14 +8,29 @@ import { COLORS } from './assets/colors';
   styleUrls: ['./banner-generator.component.scss']
 })
 export class BannerGeneratorComponent implements DoCheck {
+
+  //Width and height
   width = 300;
   height = 200;
+
+  //Colors variables
+  color1 = '#d81b60';
+  percentage1 = 0;
+  color2 = '#c62828';
+  percentage2 = 100;
+  
+  colors: string[] = COLORS;
+
+  colorsToggler = true;
+  colorsToggler2 = true;
+
+  //Font variables
   font;
   id;
   fontSize = 24;
   fontWeight;
+
   fonts: Font[] = FONTS;
-  colors: string[] = COLORS;
 
   getBannerStyles() {
     return {
@@ -23,7 +38,8 @@ export class BannerGeneratorComponent implements DoCheck {
       height: `${this.height}px`,
       fontFamily: `${this.font}`,
       fontSize: `${this.fontSize}px`,
-      fontWeight: `${this.fontWeight}`
+      fontWeight: `${this.fontWeight}`,
+      backgroundImage: `linear-gradient(to bottom, ${this.color1} ${this.percentage1}%, ${this.color2} ${this.percentage2}%)`
     };
   }
 
