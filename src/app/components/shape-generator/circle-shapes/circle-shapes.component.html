@@ -31,7 +31,7 @@
                 </div>
             </div>
 
-            <h5>Borders:</h5>
+            <h5>Border-radius</h5>
             <div class="toggler">Toggle
                 <div class="button" [ngClass]="{ 'activated' : bordersToggle }">
                     <a class="waves-effect waves-light" (click)="bordersToggle = !bordersToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
@@ -39,16 +39,16 @@
             </div>
 
             <div class="borders" [ngClass]="{'bordersHide' : bordersToggle }">
-                <label for="customRange2" class="form-label" style="margin-top: 15px;">Border-radius (top-left corner): {{ topLeftRadius }}px</label>
+                <label for="customRange2" class="form-label" style="margin-top: 15px;">Top-left: {{ topLeftRadius }}px</label>
                 <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topLeftRadius">
 
-                <label for="customRange2" class="form-label">Border-radius (top-right corner): {{ topRightRadius }}px</label>
+                <label for="customRange2" class="form-label">Top-right: {{ topRightRadius }}px</label>
                 <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topRightRadius">
 
-                <label for="customRange2" class="form-label">Border-radius (bottom-right): {{ bottomRightRadius }}px</label>
+                <label for="customRange2" class="form-label">Bottom-right: {{ bottomRightRadius }}px</label>
                 <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomRightRadius">
 
-                <label for="customRange2" class="form-label">Border-radius (bottom-left): {{ bottomLeftRadius }}px</label>
+                <label for="customRange2" class="form-label">Bottom-left: {{ bottomLeftRadius }}px</label>
                 <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomLeftRadius">
             </div>
 
@@ -61,7 +61,7 @@
 
             <div class="boxshadow" [ngClass]="{'boxshadowHide' : boxshadowToggle }">
                 <label for="customRange2" class="form-label" style="margin-top: 15px;">Horizontal offset: {{ horizontalOffset }}px</label>
-                <input type="range" class="form-range" min="0" max="200" step="1" id="customRange2" [(ngModel)]="horizontalOffset">
+                <input type="range" class="form-range" min="-200" max="200" step="2" id="customRange2" [(ngModel)]="horizontalOffset">
 
                 <label for="customRange2" class="form-label">Vertical offset: {{ verticalOffset }}px</label>
                 <input type="range" class="form-range" min="0" max="200" step="1" id="customRange2" [(ngModel)]="verticalOffset">
