@@ -1,6 +1,6 @@
 import { Component, DoCheck } from '@angular/core';
-import { Font, FONTS } from './assets/fonts';
-import { COLORS, FONTCOLORS } from './assets/colors';
+import { Font, FONTS } from '../assets/fonts';
+import { COLORS, FONTCOLORS } from '../assets/colors';
 
 import { saveAs } from 'file-saver';
 import domtoimage from 'dom-to-image';

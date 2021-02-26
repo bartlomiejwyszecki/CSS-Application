@@ -1,7 +1,7 @@
 .container-fluid {
     h3 {
-        font-size: 1.4em;
         font-weight: 700;
+        font-size: clamp(1.1em, 3vw, 1.3em);
         padding-top: 50px;
         margin-bottom: 10px;
         border-top: 2px dashed #bdbdbd;

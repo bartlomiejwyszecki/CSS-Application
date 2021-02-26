@@ -5,8 +5,8 @@
     .method {
         margin-bottom: 50px;
         h4 {
-            font-size: 1.6em;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: clamp(1.1em, 3vw, 1.3em);
             color: #212121;
         }
         ul {
@@ -26,7 +26,7 @@
                     }
                 }
                 .active {
-                    color: #0277bd;
+                    color: #3d5afe;
                 }
             }
             .whenActive {
@@ -36,12 +36,15 @@
                 display: block;
             }
             .active {
+                transition: 1s;
                 .whenActive {
-                    color: #0277bd;
+                    color: #3d5afe;
                     display: block;
+                    transition: 1s;
                 }
                 .nonActive {
                     display: none;
+                    transition: 1s;
                 }
             }
         }
