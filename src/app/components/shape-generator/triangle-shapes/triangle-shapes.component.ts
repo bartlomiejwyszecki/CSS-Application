@@ -22,8 +22,7 @@ export class TriangleShapesComponent {
   verticalOffset = 0;
   horizontalOffset = 0;
   blur = 0;
-  spread = 0;
-  shadowColor = '#212121';
+  shadowColor = '#9e9e9e';
 
   //Transform
   rotate = 0;
@@ -44,7 +43,7 @@ export class TriangleShapesComponent {
       borderLeft: `${this.leftBorder}px solid transparent`,
       borderRight: `${this.rightBorder}px solid transparent`,
       borderBottom: `${this.bottomBorder}px solid ${this.background}`,
-      boxShadow: `${this.horizontalOffset}px ${this.verticalOffset}px ${this.blur}px ${this.spread}px ${this.shadowColor}`,
+      filter: `drop-shadow(${this.horizontalOffset}px ${this.verticalOffset}px ${this.blur}px ${this.shadowColor})`,
       transform: `rotate(${this.rotate}deg) skewX(${this.skewX}deg) skewY(${this.skewY}deg)`
     }
   }

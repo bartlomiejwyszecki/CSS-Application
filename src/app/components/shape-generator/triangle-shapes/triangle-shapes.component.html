@@ -5,7 +5,7 @@
     </div>
 
     <div class="settings">
-            <h5>Colors:</h5>
+            <h5>Background-color: {{ background }}</h5>
             <div class="toggler">Toggle
                 <div class="button" [ngClass]="{ 'activated' : colorsToggle }">
                     <a class="waves-effect waves-light" (click)="colorsToggle = !colorsToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
@@ -51,10 +51,7 @@
                 <label for="customRange2" class="form-label">Blur: {{ blur }}px</label>
                 <input type="range" class="form-range" min="0" max="50" step="1" id="customRange2" [(ngModel)]="blur">
 
-                <label for="customRange2" class="form-label">Spread: {{ spread }}px</label>
-                <input type="range" class="form-range" min="-50" max="50" step="1" id="customRange2" [(ngModel)]="spread">
-
-                <h6>Box-shadow color:</h6>
+                <h6>Box-shadow color: {{ shadowColor }}</h6>
                 <div class="toggler">Toggle
                     <div class="button" [ngClass]="{ 'activated' : shadowColorToggle }">
                         <a class="waves-effect waves-light" (click)="shadowColorToggle = !shadowColorToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
@@ -87,8 +84,15 @@
             <h3>Your code:</h3>
             <div class="code">
                 <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
-                    <span class="property">background: </span>{{ background }}px; <br />
                     <span class="property">width: </span>{{ width }}px; <br />
+                    <span class="property">height: </span>{{ height }}px; <br />
+                    <span class="property">border-left: </span>{{ leftBorder }}px solid transparent; <br />
+                    <span class="property">border-right: </span>{{ rightBorder }}px solid transparent; <br />
+                    <span class="property">border-bottom: </span>{{ bottomBorder }}px solid {{ background }}; <br />
+                    <span class="property">filter: </span>drop-shadow({{ horizontalOffset }}px {{ verticalOffset }}px 
+                        {{ blur }}px {{ shadowColor }}); <br />
+                    <span class="property">transform: </span>rotate({{ rotate }}deg) skewX({{ skewX }}deg)
+                        skewY({{ skewY }}deg); <br />
                 &#125;
                 </article>
             </div>
