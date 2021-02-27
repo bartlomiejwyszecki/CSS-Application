@@ -72,7 +72,7 @@
                 <label for="customRange2" class="form-label">Spread: {{ spread }}px</label>
                 <input type="range" class="form-range" min="-50" max="50" step="1" id="customRange2" [(ngModel)]="spread">
 
-                <h6>Box-shadow color:</h6>
+                <h6>Box-shadow color: {{ shadowColor }}</h6>
                 <div class="toggler">Toggle
                     <div class="button" [ngClass]="{ 'activated' : shadowColorToggle }">
                         <a class="waves-effect waves-light" (click)="shadowColorToggle = !shadowColorToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>

@@ -25,7 +25,7 @@ export class CircleShapesComponent {
   horizontalOffset = 0;
   blur = 0;
   spread = 0;
-  shadowColor = '#212121';
+  shadowColor = '#9e9e9e';
 
   //Transform
   rotate = 0;

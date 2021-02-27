@@ -16,7 +16,7 @@
                 <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="background = c"></div>
             </div>
 
-            <h5>Border-radius</h5>
+            <h5>Borders</h5>
             <div class="toggler">Toggle
                 <div class="button" [ngClass]="{ 'activated' : bordersToggle }">
                     <a class="waves-effect waves-light" (click)="bordersToggle = !bordersToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
@@ -24,17 +24,14 @@
             </div>
 
             <div class="borders" [ngClass]="{'bordersHide' : bordersToggle }">
-                <label for="customRange2" class="form-label" style="margin-top: 15px;">Top-left: {{ topLeftRadius }}px</label>
-                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topLeftRadius">
+                <label for="customRange2" class="form-label" style="margin-top: 15px;">Border-left: {{ leftBorder }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="leftBorder">
 
-                <label for="customRange2" class="form-label">Top-right: {{ topRightRadius }}px</label>
-                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topRightRadius">
+                <label for="customRange2" class="form-label">Border-right: {{ rightBorder }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="rightBorder">
 
-                <label for="customRange2" class="form-label">Bottom-right: {{ bottomRightRadius }}px</label>
-                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomRightRadius">
-
-                <label for="customRange2" class="form-label">Bottom-left: {{ bottomLeftRadius }}px</label>
-                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomLeftRadius">
+                <label for="customRange2" class="form-label">Border-bottom: {{ bottomBorder }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomBorder">
             </div>
 
             <h5>Box shadow:</h5>
@@ -92,13 +89,6 @@
                 <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
                     <span class="property">background: </span>{{ background }}px; <br />
                     <span class="property">width: </span>{{ width }}px; <br />
-                    <span class="property">height: </span>{{ height }}px; <br />
-                    <span class="property">border-radius: </span>{{ topLeftRadius }}px {{ topRightRadius }}px 
-                        {{ bottomRightRadius}}px {{ bottomLeftRadius }}px; <br />
-                    <span class="property">box-shadow: </span>{{ horizontalOffset }}px {{ verticalOffset }}px
-                        {{ blur }}px {{ spread }}px {{ shadowColor }}; <br />
-                    <span class="property">transform: </span>rotate({{ rotate }}deg) skewX({{ skewX }}deg)
-                        skewY({{ skewY }}deg); <br />
                 &#125;
                 </article>
             </div>

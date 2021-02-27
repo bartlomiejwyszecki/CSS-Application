@@ -14,10 +14,9 @@ export class TriangleShapesComponent {
   colors: string[] = COLORS;
 
   //Shape ranges
-  topLeftRadius = 0;
-  topRightRadius = 0;
-  bottomRightRadius = 0;
-  bottomLeftRadius = 0;
+  leftBorder = 200;
+  rightBorder = 200;
+  bottomBorder = 300;
 
   //Boxshadow ranges
   verticalOffset = 0;
@@ -42,8 +41,9 @@ export class TriangleShapesComponent {
     return {
       width: `${this.width}px`,
       height: `${this.height}px`,
-      background: `${this.background}`,
-      borderRadius: `${this.topLeftRadius}px ${this.topRightRadius}px ${this.bottomRightRadius}px ${this.bottomLeftRadius}px`,
+      borderLeft: `${this.leftBorder}px solid transparent`,
+      borderRight: `${this.rightBorder}px solid transparent`,
+      borderBottom: `${this.bottomBorder}px solid ${this.background}`,
       boxShadow: `${this.horizontalOffset}px ${this.verticalOffset}px ${this.blur}px ${this.spread}px ${this.shadowColor}`,
       transform: `rotate(${this.rotate}deg) skewX(${this.skewX}deg) skewY(${this.skewY}deg)`
     }
