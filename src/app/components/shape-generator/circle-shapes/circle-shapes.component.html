@@ -84,6 +84,24 @@
                 </div>
             </div>
 
+            <h5>Transform</h5>
+            <div class="toggler">Toggle
+                <div class="button" [ngClass]="{ 'activated' : transformToggle }">
+                    <a class="waves-effect waves-light" (click)="transformToggle = !transformToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+
+            <div class="borders" [ngClass]="{'transformHide' : transformToggle }">
+                <label for="customRange2" class="form-label" style="margin-top: 15px;">Rotate: {{ rotate }}deg</label>
+                <input type="range" class="form-range" min="0" max="360" step="1" id="customRange2" [(ngModel)]="rotate">
+
+                <label for="customRange2" class="form-label">SkewX: {{ skewX }}deg</label>
+                <input type="range" class="form-range" min="-90" max="90" step="1" id="customRange2" [(ngModel)]="skewX">
+
+                <label for="customRange2" class="form-label">SkewY: {{ skewY }}deg</label>
+                <input type="range" class="form-range" min="-90" max="90" step="1" id="customRange2" [(ngModel)]="skewY">
+            </div>
+
             <h3>Your code:</h3>
             <div class="code">
                 <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
@@ -94,6 +112,8 @@
                         {{ bottomRightRadius}}px {{ bottomLeftRadius }}px; <br />
                     <span class="property">box-shadow: </span>{{ horizontalOffset }}px {{ verticalOffset }}px
                         {{ blur }}px {{ spread }}px {{ shadowColor }}; <br />
+                    <span class="property">transform: </span>rotate({{ rotate }}deg) skewX({{ skewX }}deg)
+                        skewY({{ skewY }}deg); <br />
                 &#125;
                 </article>
             </div>

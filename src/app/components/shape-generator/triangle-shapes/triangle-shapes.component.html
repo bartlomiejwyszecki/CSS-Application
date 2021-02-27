@@ -1,3 +1,107 @@
 <div class="container-fluid">
-    <h3>In building ;(</h3>
+
+    <div class="shape">
+        <div class="content" [ngStyle]="getShape()" #shape></div>
+    </div>
+
+    <div class="settings">
+            <h5>Colors:</h5>
+            <div class="toggler">Toggle
+                <div class="button" [ngClass]="{ 'activated' : colorsToggle }">
+                    <a class="waves-effect waves-light" (click)="colorsToggle = !colorsToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+
+            <div class="colors" [ngClass]="{ 'colorsHide' : colorsToggle }">
+                <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="background = c"></div>
+            </div>
+
+            <h5>Border-radius</h5>
+            <div class="toggler">Toggle
+                <div class="button" [ngClass]="{ 'activated' : bordersToggle }">
+                    <a class="waves-effect waves-light" (click)="bordersToggle = !bordersToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+
+            <div class="borders" [ngClass]="{'bordersHide' : bordersToggle }">
+                <label for="customRange2" class="form-label" style="margin-top: 15px;">Top-left: {{ topLeftRadius }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topLeftRadius">
+
+                <label for="customRange2" class="form-label">Top-right: {{ topRightRadius }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="topRightRadius">
+
+                <label for="customRange2" class="form-label">Bottom-right: {{ bottomRightRadius }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomRightRadius">
+
+                <label for="customRange2" class="form-label">Bottom-left: {{ bottomLeftRadius }}px</label>
+                <input type="range" class="form-range" min="0" max="1000" step="1" id="customRange2" [(ngModel)]="bottomLeftRadius">
+            </div>
+
+            <h5>Box shadow:</h5>
+            <div class="toggler">Toggle
+                <div class="button" [ngClass]="{'activated' : boxshadowToggle }">
+                    <a class="waves-effect waves-light" (click)="boxshadowToggle = !boxshadowToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+
+            <div class="boxshadow" [ngClass]="{'boxshadowHide' : boxshadowToggle }">
+                <label for="customRange2" class="form-label" style="margin-top: 15px;">Horizontal offset: {{ horizontalOffset }}px</label>
+                <input type="range" class="form-range" min="-200" max="200" step="2" id="customRange2" [(ngModel)]="horizontalOffset">
+
+                <label for="customRange2" class="form-label">Vertical offset: {{ verticalOffset }}px</label>
+                <input type="range" class="form-range" min="0" max="200" step="1" id="customRange2" [(ngModel)]="verticalOffset">
+
+                <label for="customRange2" class="form-label">Blur: {{ blur }}px</label>
+                <input type="range" class="form-range" min="0" max="50" step="1" id="customRange2" [(ngModel)]="blur">
+
+                <label for="customRange2" class="form-label">Spread: {{ spread }}px</label>
+                <input type="range" class="form-range" min="-50" max="50" step="1" id="customRange2" [(ngModel)]="spread">
+
+                <h6>Box-shadow color:</h6>
+                <div class="toggler">Toggle
+                    <div class="button" [ngClass]="{ 'activated' : shadowColorToggle }">
+                        <a class="waves-effect waves-light" (click)="shadowColorToggle = !shadowColorToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                    </div>
+                </div>
+
+                <div class="colors" [ngClass]="{ 'shadowColorHide' : shadowColorToggle }">
+                    <div class="color" *ngFor="let c of colors" [style.background]="c" (click)="shadowColor = c"></div>
+                </div>
+            </div>
+
+            <h5>Transform</h5>
+            <div class="toggler">Toggle
+                <div class="button" [ngClass]="{ 'activated' : transformToggle }">
+                    <a class="waves-effect waves-light" (click)="transformToggle = !transformToggle"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                </div>
+            </div>
+
+            <div class="borders" [ngClass]="{'transformHide' : transformToggle }">
+                <label for="customRange2" class="form-label" style="margin-top: 15px;">Rotate: {{ rotate }}deg</label>
+                <input type="range" class="form-range" min="0" max="360" step="1" id="customRange2" [(ngModel)]="rotate">
+
+                <label for="customRange2" class="form-label">SkewX: {{ skewX }}deg</label>
+                <input type="range" class="form-range" min="-90" max="90" step="1" id="customRange2" [(ngModel)]="skewX">
+
+                <label for="customRange2" class="form-label">SkewY: {{ skewY }}deg</label>
+                <input type="range" class="form-range" min="-90" max="90" step="1" id="customRange2" [(ngModel)]="skewY">
+            </div>
+
+            <h3>Your code:</h3>
+            <div class="code">
+                <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
+                    <span class="property">background: </span>{{ background }}px; <br />
+                    <span class="property">width: </span>{{ width }}px; <br />
+                    <span class="property">height: </span>{{ height }}px; <br />
+                    <span class="property">border-radius: </span>{{ topLeftRadius }}px {{ topRightRadius }}px 
+                        {{ bottomRightRadius}}px {{ bottomLeftRadius }}px; <br />
+                    <span class="property">box-shadow: </span>{{ horizontalOffset }}px {{ verticalOffset }}px
+                        {{ blur }}px {{ spread }}px {{ shadowColor }}; <br />
+                    <span class="property">transform: </span>rotate({{ rotate }}deg) skewX({{ skewX }}deg)
+                        skewY({{ skewY }}deg); <br />
+                &#125;
+                </article>
+            </div>
+            
+    </div>
 </div>

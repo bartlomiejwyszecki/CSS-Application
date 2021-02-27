@@ -27,12 +27,18 @@ export class CircleShapesComponent {
   spread = 0;
   shadowColor = '#212121';
 
+  //Transform
+  rotate = 0;
+  skewX = 0;
+  skewY = 0;
+
   //togglers
   bordersToggle = true;
   boxshadowToggle = true;
   basicsToggle = true;
   basicsColorsToggle = true;
   shadowColorToggle = true;
+  transformToggle = true;
 
   getShape() {
     return {
@@ -40,7 +46,8 @@ export class CircleShapesComponent {
       height: `${this.height}px`,
       background: `${this.background}`,
       borderRadius: `${this.topLeftRadius}px ${this.topRightRadius}px ${this.bottomRightRadius}px ${this.bottomLeftRadius}px`,
-      boxShadow: `${this.horizontalOffset}px ${this.verticalOffset}px ${this.blur}px ${this.spread}px ${this.shadowColor}`
+      boxShadow: `${this.horizontalOffset}px ${this.verticalOffset}px ${this.blur}px ${this.spread}px ${this.shadowColor}`,
+      transform: `rotate(${this.rotate}deg) skewX(${this.skewX}deg) skewY(${this.skewY}deg)`
     }
   }
 }
