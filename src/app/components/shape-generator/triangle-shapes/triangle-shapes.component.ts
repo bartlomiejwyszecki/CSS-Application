@@ -14,9 +14,9 @@ export class TriangleShapesComponent {
   colors: string[] = COLORS;
 
   //Shape ranges
-  leftBorder = 167;
-  rightBorder = 167;
-  bottomBorder = 250;
+  leftBorder = 133;
+  rightBorder = 133;
+  bottomBorder = 200;
 
   //Boxshadow ranges
   verticalOffset = 0;

@@ -10,15 +10,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
 
 .container-fluid {
-    max-width: 100%;
     .banner {
         display: flex;
         justify-content: center;
-        max-width: 100%;
         margin-bottom: 50px;
         .content {
             text-align: center;
-            max-width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -134,7 +131,6 @@
 
 @media only screen and (max-width: 992px) {
     .container-fluid {
-        overflow: hidden;
         .colors {
             width: 100%;
             .color {

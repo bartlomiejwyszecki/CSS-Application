@@ -89,18 +89,15 @@ $black: #212121;
         margin-left: 40vw;
     }
     .container-fluid.active {
-        margin-left: 11vw;
+        margin-left: 13vw;
     }
     .router {
-        width: 110%;
         margin-left: -20px;
     }
 }
 
 @media only screen and (max-width: 368px) {
     .router {
-        width: inherit;
-        width: 120%;
         margin-left: -25px;
     }
 }

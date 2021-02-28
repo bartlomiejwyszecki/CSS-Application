@@ -5,6 +5,7 @@
         color: #fafafa;
         padding-top: 2vh;
         transition: 1s;
+        overflow: inherit;
         -webkit-box-shadow: 5px 0px 35px -12px rgba(66,66,66,0.9); 
         box-shadow: 5px 0px 35px -5px rgba(66,66,66,0.9);
         background: linear-gradient(171deg, rgba(0,77,64,1) 0%, rgba(0,121,107,1) 30%, rgba(0,121,107,1) 70%, rgba(0,150,136,1));
@@ -140,7 +141,7 @@
         }
     }
     .active {
-        width: 11vw !important;
+        width: 13vw !important;
     }
     .activeRoute {
         border-left: 2px solid #eeeeee;
