@@ -6,6 +6,7 @@ import { GradientGeneratorComponent } from './components/gradient-generator/grad
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CircleShapesComponent } from './components/shape-generator/circle-shapes/circle-shapes.component';
+import { QuadrangleShapesComponent } from './components/shape-generator/quadrangle-shapes/quadrangle-shapes.component';
 import { ShapeGeneratorComponent } from './components/shape-generator/shape-generator.component';
 import { TriangleShapesComponent } from './components/shape-generator/triangle-shapes/triangle-shapes.component';
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'shape-generator', component: ShapeGeneratorComponent,
         children: [
           { path: 'circle-shapes', component: CircleShapesComponent },
-          { path: 'triangle-shapes', component: TriangleShapesComponent }
+          { path: 'triangle-shapes', component: TriangleShapesComponent },
+          { path: 'quadrangle-shapes', component: QuadrangleShapesComponent }
         ] 
   },
   { path: 'gradient-generator', component: GradientGeneratorComponent },

@@ -15,9 +15,9 @@ export class CircleShapesComponent {
   colors: string[] = COLORS;
 
   //Shape ranges
-  topLeftRadius = 0;
-  topRightRadius = 0;
-  bottomRightRadius = 0;
+  topLeftRadius = 100;
+  topRightRadius = 100;
+  bottomRightRadius = 100;
   bottomLeftRadius = 0;
 
   //Boxshadow ranges

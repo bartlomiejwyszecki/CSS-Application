@@ -72,25 +72,35 @@ $black: #212121;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
     ul {
         margin-top: 0px;
     }
     .container-fluid { 
-        margin-left: 27vw;
-        padding-left: 0px;
-        padding-right: 0px;
+        margin-left: 30vw;
     }
     .container-fluid.active {
-        margin-left: 9vw;
+        margin-left: 10vw;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .container-fluid { 
-        margin-left: 42vw;
+        margin-left: 40vw;
     }
     .container-fluid.active {
         margin-left: 11vw;
+    }
+    .router {
+        width: 110%;
+        margin-left: -20px;
+    }
+}
+
+@media only screen and (max-width: 368px) {
+    .router {
+        width: inherit;
+        width: 120%;
+        margin-left: -25px;
     }
 }

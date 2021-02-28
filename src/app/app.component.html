@@ -1,20 +1,21 @@
-<div class="flexbox">
-    <div class="side">
-      <app-sidebar [toggler]="toggle"></app-sidebar>
-    </div>
+<div class="overflow-hidden">
+  <div class="flexbox">
+      <div class="side">
+        <app-sidebar [toggler]="toggle"></app-sidebar>
+      </div>
 
-    <div class="container-fluid" [ngClass]="{'active' : toggle }">
-      <div class="row col-12">
-        <div class="toggler" (click)="toggle = !toggle" [ngClass]="{'active' : toggle }">
-          <a class="waves-effect waves-light btn">
-             <i class="fas fa-bars"></i><span>Toggle</span>
-          </a>
+      <div class="container-fluid" [ngClass]="{'active' : toggle }">
+        <div class="row col-12">
+          <div class="toggler" (click)="toggle = !toggle" [ngClass]="{'active' : toggle }">
+            <a class="waves-effect waves-light btn">
+              <i class="fas fa-bars"></i><span>Toggle</span>
+            </a>
+          </div>
         </div>
+        <div class="container">
+          <div class="router">
+            <router-outlet></router-outlet>
+          </div>
       </div>
-      <div class="container">
-        <div class="router">
-          <router-outlet></router-outlet>
-        </div>
-      </div>
-    </div>
+  </div>
 </div>

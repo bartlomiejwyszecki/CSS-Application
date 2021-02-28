@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CircleShapesComponent } from './components/shape-generator/circle-shapes/circle-shapes.component';
 import { TriangleShapesComponent } from './components/shape-generator/triangle-shapes/triangle-shapes.component';
+import { QuadrangleShapesComponent } from './components/shape-generator/quadrangle-shapes/quadrangle-shapes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TriangleShapesComponent } from './components/shape-generator/triangle-s
     BannerGeneratorComponent,
     PageNotFoundComponent,
     CircleShapesComponent,
-    TriangleShapesComponent
+    TriangleShapesComponent,
+    QuadrangleShapesComponent
   ],
   imports: [
     BrowserModule,
