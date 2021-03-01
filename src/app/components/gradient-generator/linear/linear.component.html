@@ -1,0 +1,41 @@
+<div class="gradient">
+    <div class="content" [ngStyle]="getGradient()" #gradient></div>
+</div>
+
+<div class="settings">
+    <div class="colors">
+        <h4>Colors:</h4>
+    </div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Color</th>
+            <th>Percentage</th>
+            <th>Delete</th>
+        </tr>
+        <tr style="background: #ececec;">
+            <td><label for="colorpicker">1</label></td>
+            <td><input type="color" id="colorpicker" value="#ff0000" [(ngModel)]="color1"></td>
+            <td>0%</td>
+            <td><span class="disabled"><i class="fas fa-times fa-2x"></i></span></td>
+        </tr>
+        <tr style="background: #ececec;">
+            <td><label for="colorpicker">2</label></td>
+            <td><input type="color" id="colorpicker" value="#ff0000" [(ngModel)]="color2"></td>
+            <td>0%</td>
+            <td><span class="disabled"><i class="fas fa-times fa-2x"></i></span></td>
+        </tr>
+        <ng-container *ngFor="let c of colors; let i = index;">
+            <tr [ngStyle]="{'background': i % 2 !== 0 ? '#ececec' : null}" *ngIf="i > 1">
+                <td><label for="colorpicker">{{ i }}</label></td>
+                <td><input type="color" id="colorpicker" value="{{ c }}" [(ngModel)]="colors[i-1]"></td>
+                <td>0%</td>
+                <td><a (click)="delete(i)"><i class="fas fa-times fa-2x"></i></a></td>
+            </tr>
+        </ng-container>
+        <tr>
+            <td class="add" colspan="4"><a (click)="add()"><span>Add new color</span><i class="fas fa-plus fa-2x"></i></a></td>
+        </tr>
+    </table>
+    <p> Color1: {{ color1 }} </p>
+</div>

@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-gradient-generator',
   templateUrl: './gradient-generator.component.html',
   styleUrls: ['./gradient-generator.component.scss']
 })
-export class GradientGeneratorComponent implements OnInit {
+export class GradientGeneratorComponent {
+  width = 100;
+  height = 75;
+  background = 'green';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  getGradient() {
+    return {
+      background: `${this.background}`
+    };
   }
-
 }

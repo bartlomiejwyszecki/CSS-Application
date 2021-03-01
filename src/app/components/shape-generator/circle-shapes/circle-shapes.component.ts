@@ -10,8 +10,8 @@ export class CircleShapesComponent {
   
   //Basics
   background = '#3d5afe';
-  width = 300;
-  height = 300;
+  width = 250;
+  height = 250;
   colors: string[] = COLORS;
 
   //Shape ranges

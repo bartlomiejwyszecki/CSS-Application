@@ -1,1 +1,16 @@
-<p>gradient-generator works!</p>
+<div class="container-fluid">
+
+    <div class="method">
+        <h4>Choose method:</h4>
+        <ul>
+            <li><a routerLink='/gradient-generator/linear' routerLinkActive="active">
+                <span class="nonActive"><i class="bi bi-circle"></i></span>
+                <span class="whenActive"><i class="bi bi-circle-fill"></i></span> Linear</a></li>
+            <li><a routerLink='/gradient-generator/radial' routerLinkActive="active">
+                <span class="nonActive"><i class="bi bi-circle"></i></span>
+                <span class="whenActive"><i class="bi bi-circle-fill"></i></span> Radial</a></li>
+        </ul>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,48 @@
+.method {
+    margin-bottom: 50px;
+    h4 {
+        font-weight: 700;
+        font-size: clamp(1.1em, 3vw, 1.3em);
+        color: #212121;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: inline-flex;
+            a {
+                text-decoration: none;
+                color: #212121;
+                font-weight: 500;
+                font-size: 1em;
+                display: inline-flex;
+                padding: 0.5em 1em 0.5em 1em;
+                span {
+                    padding-right: 0.5em;
+                    font-size: 0.8em;
+                }
+            }
+            .active {
+                color: #3d5afe;
+            }
+        }
+        .whenActive {
+            display: none;
+        }
+        .nonActive {
+            display: block;
+        }
+        .active {
+            transition: 1s;
+            .whenActive {
+                color: #3d5afe;
+                display: block;
+                transition: 1s;
+            }
+            .nonActive {
+                display: none;
+                transition: 1s;
+            }
+        }
+    }
+}

@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CircleShapesComponent } from './components/shape-generator/circle-shapes/circle-shapes.component';
 import { TriangleShapesComponent } from './components/shape-generator/triangle-shapes/triangle-shapes.component';
 import { QuadrangleShapesComponent } from './components/shape-generator/quadrangle-shapes/quadrangle-shapes.component';
+import { LinearComponent } from './components/gradient-generator/linear/linear.component';
+import { RadialComponent } from './components/gradient-generator/radial/radial.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { QuadrangleShapesComponent } from './components/shape-generator/quadrang
     PageNotFoundComponent,
     CircleShapesComponent,
     TriangleShapesComponent,
-    QuadrangleShapesComponent
+    QuadrangleShapesComponent,
+    LinearComponent,
+    RadialComponent
   ],
   imports: [
     BrowserModule,

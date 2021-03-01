@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { __generator } from 'tslib';
 import { BannerGeneratorComponent } from './components/banner-generator/banner-generator.component';
 import { GradientGeneratorComponent } from './components/gradient-generator/gradient-generator.component';
+import { LinearComponent } from './components/gradient-generator/linear/linear.component';
+import { RadialComponent } from './components/gradient-generator/radial/radial.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CircleShapesComponent } from './components/shape-generator/circle-shapes/circle-shapes.component';
@@ -20,7 +22,12 @@ const routes: Routes = [
           { path: 'quadrangle-shapes', component: QuadrangleShapesComponent }
         ] 
   },
-  { path: 'gradient-generator', component: GradientGeneratorComponent },
+  { path: 'gradient-generator', component: GradientGeneratorComponent,
+        children: [
+          { path: 'linear', component: LinearComponent },
+          { path: 'radial', component: RadialComponent }
+        ] 
+  },
   { path: 'banner-generator', component: BannerGeneratorComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
