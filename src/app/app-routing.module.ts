@@ -11,6 +11,7 @@ import { CircleShapesComponent } from './components/shape-generator/circle-shape
 import { QuadrangleShapesComponent } from './components/shape-generator/quadrangle-shapes/quadrangle-shapes.component';
 import { ShapeGeneratorComponent } from './components/shape-generator/shape-generator.component';
 import { TriangleShapesComponent } from './components/shape-generator/triangle-shapes/triangle-shapes.component';
+import { TypographyComponent } from './components/typography/typography.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
         ] 
   },
   { path: 'banner-generator', component: BannerGeneratorComponent },
+  { path: 'typography', component: TypographyComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

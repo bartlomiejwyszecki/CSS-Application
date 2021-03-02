@@ -16,6 +16,7 @@ import { TriangleShapesComponent } from './components/shape-generator/triangle-s
 import { QuadrangleShapesComponent } from './components/shape-generator/quadrangle-shapes/quadrangle-shapes.component';
 import { LinearComponent } from './components/gradient-generator/linear/linear.component';
 import { RadialComponent } from './components/gradient-generator/radial/radial.component';
+import { TypographyComponent } from './components/typography/typography.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RadialComponent } from './components/gradient-generator/radial/radial.c
     TriangleShapesComponent,
     QuadrangleShapesComponent,
     LinearComponent,
-    RadialComponent
+    RadialComponent,
+    TypographyComponent
   ],
   imports: [
     BrowserModule,
