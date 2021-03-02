@@ -7,27 +7,21 @@ import { ColorItem } from './types';
 export class ColorsService {
 
   public colors: ColorItem[] = [
-    { name: '#000000',
-      percentage: 100 }
   ];
 
-  public full: boolean = false;
+  public count = 0;
 
   constructor() { }
 
   addColor(colorName: string) {
-      if (this.colors.length < 9) {
-        this.colors.push({
-        name: colorName,
-        percentage: 100
-      });
-    } else {
-      this.full = !this.full;
-    }
+    this.colors.push({
+      name: colorName,
+      percentage: 100
+    });
   }
   
   deleteColor(index: number) {
-    this.colors.splice(index-1, 1);
+    this.colors.splice(index, 1);
   }
 }
 

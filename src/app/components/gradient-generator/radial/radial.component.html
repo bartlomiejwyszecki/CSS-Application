@@ -1,1 +1,92 @@
-<p>radial works!</p>
+<div class="gradient">
+    <div class="content" [ngStyle]="getGradient()" #gradient></div>
+</div>
+
+<div class="settings">
+    <div class="colors">
+        <h4>Colors:</h4>
+    </div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Color</th>
+            <th>Percentage [%]</th>
+            <th>Delete</th>
+        </tr>
+        <tr style="background: #ececec;">
+            <td><label for="colorpicker">1</label></td>
+            <td><input type="color" id="colorpicker" value="#ff7b00" [(ngModel)]="initialColors[0].name"></td>
+            <td><input type="number" min="0" max="{{ initialColors[1].percentage }}" value="{{ initialColors[0].percentage }}" [(ngModel)]="initialColors[0].percentage"></td>
+            <td><span class="disabled"><i class="fas fa-times fa-2x"></i></span></td>
+        </tr>
+        <tr>
+            <td><label for="colorpicker">2</label></td>
+            <td><input type="color" id="colorpicker" value="#e90152" [(ngModel)]="initialColors[1].name"></td>
+            <td><input type="number" min="0" max="100" value="{{ initialColors[1].percentage }}" [(ngModel)]="initialColors[1].percentage"></td>
+            <td><span class="disabled"><i class="fas fa-times fa-2x"></i></span></td>
+        </tr>
+        <ng-container *ngFor="let c of colors; let i = index;">
+            <tr [ngStyle]="{'background': i % 2 === 0 ? '#ececec' : null}">
+                <td><label for="colorpicker">{{ i + 3 }}</label></td>
+                <td><input type="color" id="colorpicker" value="{{ c.name }}" [(ngModel)]="colors[i].name"></td>
+                <td><input type="number" min="{{ initialColors[1].percentage }}" max="100" value="{{ c.percentage }}" [(ngModel)]="colors[i].percentage"></td>
+                <td><a (click)="delete(i)"><i class="fas fa-times fa-2x"></i></a></td>
+            </tr>
+        </ng-container>
+        <tr>
+            <td class="add" colspan="4"><a (click)="add()" [ngClass]=" { 'disabled' : disableAdd } "><span>Add new color</span><i class="fas fa-plus fa-lg"></i></a></td>
+        </tr>
+    </table>
+
+    <h4 style="margin-top: 40px;">Rotate:</h4>
+
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="closest-side" [(ngModel)]="checked">
+            <label class="form-check-label" for="exampleRadios1">
+            Closest side
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="closest-corner" [(ngModel)]="checked">
+            <label class="form-check-label" for="exampleRadios2">
+            Closest corner
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="farthest-side" [(ngModel)]="checked">
+            <label class="form-check-label" for="exampleRadios3">
+            Farthest side
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="farthest-corner" [(ngModel)]="checked">
+            <label class="form-check-label" for="exampleRadios4">
+            Farthest corner
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="circle at" [(ngModel)]="checked">
+            <label class="form-check-label" for="exampleRadios5">
+            Circle at
+            </label>
+        </div>
+
+    <div class="rotation" style="margin-top: 20px; margin-bottom: 50px;" *ngIf="checked === 'circle at'">
+        <div class="rotationInput">
+            <label for="customRange2" class="form-label" style="margin-top: 15px;"></label>
+            <input type="range" class="form-range" min="0" max="100" step="1" id="customRange2" [(ngModel)]="rotation">
+        </div>
+        <div class="rotator">
+            <div class="content" [ngStyle]="getGradient()" #rotator><span>{{ rotation }}</span>
+            </div>
+        </div>
+    </div>
+
+    <h3>Your code:</h3>
+        <div class="code">
+            <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
+                <span class="property">background-image: </span>{{ code.backgroundImage }}; <br />
+                &#125;
+            </article>
+        </div>
+</div>

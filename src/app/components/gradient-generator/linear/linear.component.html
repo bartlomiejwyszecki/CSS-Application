@@ -26,15 +26,15 @@
             <td><span class="disabled"><i class="fas fa-times fa-2x"></i></span></td>
         </tr>
         <ng-container *ngFor="let c of colors; let i = index;">
-            <tr [ngStyle]="{'background': i % 2 !== 0 ? '#ececec' : null}" *ngIf="i > 0">
-                <td><label for="colorpicker">{{ i + 2 }}</label></td>
-                <td><input type="color" id="colorpicker" value="{{ c.name }}" [(ngModel)]="colors[i-1].name"></td>
-                <td><input type="number" min="{{ initialColors[1].percentage }}" max="100" value="{{ c.percentage }}" [(ngModel)]="colors[i-1].percentage"></td>
+            <tr [ngStyle]="{'background': i % 2 === 0 ? '#ececec' : null}">
+                <td><label for="colorpicker">{{ i + 3 }}</label></td>
+                <td><input type="color" id="colorpicker" value="{{ c.name }}" [(ngModel)]="colors[i].name"></td>
+                <td><input type="number" min="{{ initialColors[1].percentage }}" max="100" value="{{ c.percentage }}" [(ngModel)]="colors[i].percentage"></td>
                 <td><a (click)="delete(i)"><i class="fas fa-times fa-2x"></i></a></td>
             </tr>
         </ng-container>
         <tr>
-            <td class="add" colspan="4"><a (click)="add()" [disabled]="check()"><span>Add new color</span><i class="fas fa-plus fa-lg"></i></a></td>
+            <td class="add" colspan="4"><a (click)="add()" [ngClass]=" { 'disabled' : disableAdd } "><span>Add new color</span><i class="fas fa-plus fa-lg"></i></a></td>
         </tr>
     </table>
 
@@ -54,7 +54,7 @@
     <h3>Your code:</h3>
         <div class="code">
             <article><span class="dot">.</span><span class="className">shape</span> &#123; <br />
-                <span class="property">background-image: </span>{{ code }}px; <br />
+                <span class="property">background-image: </span>{{ code.backgroundImage }}; <br />
                 &#125;
             </article>
         </div>

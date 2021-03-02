@@ -91,13 +91,4 @@ $black: #212121;
     .container-fluid.active {
         margin-left: 13vw;
     }
-    .router {
-        margin-left: -20px;
-    }
-}
-
-@media only screen and (max-width: 368px) {
-    .router {
-        margin-left: -25px;
-    }
 }
