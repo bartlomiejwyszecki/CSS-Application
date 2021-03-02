@@ -11,11 +11,13 @@ $black: #212121;
     .side {
         height: 100%;
         position: fixed;
+        z-index: 3;
     }
     .container-fluid {
         padding-top: 15px;
         transition: 1s;
         height: auto;
+        z-index: 2;
         .toggler {
             position: fixed;
             z-index: 1000;
