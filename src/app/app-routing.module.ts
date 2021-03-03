@@ -16,8 +16,9 @@ import { TypographyComponent } from './components/typography/typography.componen
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'shape-generator', component: ShapeGeneratorComponent,
+  { path: 'shape-generator', component: ShapeGeneratorComponent, 
         children: [
+          { path: '', redirectTo: '/shape-generator/circle-shapes', pathMatch: 'full' },
           { path: 'circle-shapes', component: CircleShapesComponent },
           { path: 'triangle-shapes', component: TriangleShapesComponent },
           { path: 'quadrangle-shapes', component: QuadrangleShapesComponent }
@@ -25,6 +26,7 @@ const routes: Routes = [
   },
   { path: 'gradient-generator', component: GradientGeneratorComponent,
         children: [
+          { path: '', redirectTo: '/gradient-generator/linear', pathMatch: 'full' },
           { path: 'linear', component: LinearComponent },
           { path: 'radial', component: RadialComponent }
         ] 

@@ -157,7 +157,7 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Welcome to my CSS angular application!");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "This application is made to help developer use some common CSS tools in one place. I made this application to improve my ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "This application is made to help the developer use some common CSS tools in one place. I made this application to improve my ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "span");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Angular");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -171,20 +171,20 @@ HomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "The tools description");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "At the moment there are only three tools, but I'm planning to add new ones in the future. Here is current tools description: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "At the moment there are only three tools, but I'm planning to add new ones in the future. Here is a current tools description: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "ul");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "span");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Shape generator");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " - this tool helps to make some more unusual shape from div than simple square or rectangle. It lets developer to create shapes like: circle, ellipse, egg, triangle, trapezoid, diamond, and many other shapes.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " - this tool helps to make some more unusual shape from div than simple square or rectangle. It lets developer create shapes like: circle, ellipse, egg, triangle, trapezoid, diamond, and many other shapes.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "li");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "span");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Gradient generator");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " - as the name suggests, it makes a gradient of chosen colors, and rotation degree. This tool lets choose maximum 10 colors, radial or linear direction, and gradient transform properties.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, " - as the name suggests, it makes a gradient of chosen colors, and rotation degree. This tool allows to use a maximum of 10 colors, radial or linear direction, and gradient transform properties.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "li");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "span");
@@ -2898,6 +2898,7 @@ const routes = [
     { path: 'home', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_6__["HomeComponent"] },
     { path: 'shape-generator', component: _components_shape_generator_shape_generator_component__WEBPACK_IMPORTED_MODULE_10__["ShapeGeneratorComponent"],
         children: [
+            { path: '', redirectTo: '/shape-generator/circle-shapes', pathMatch: 'full' },
             { path: 'circle-shapes', component: _components_shape_generator_circle_shapes_circle_shapes_component__WEBPACK_IMPORTED_MODULE_8__["CircleShapesComponent"] },
             { path: 'triangle-shapes', component: _components_shape_generator_triangle_shapes_triangle_shapes_component__WEBPACK_IMPORTED_MODULE_11__["TriangleShapesComponent"] },
             { path: 'quadrangle-shapes', component: _components_shape_generator_quadrangle_shapes_quadrangle_shapes_component__WEBPACK_IMPORTED_MODULE_9__["QuadrangleShapesComponent"] }
@@ -2905,6 +2906,7 @@ const routes = [
     },
     { path: 'gradient-generator', component: _components_gradient_generator_gradient_generator_component__WEBPACK_IMPORTED_MODULE_3__["GradientGeneratorComponent"],
         children: [
+            { path: '', redirectTo: '/gradient-generator/linear', pathMatch: 'full' },
             { path: 'linear', component: _components_gradient_generator_linear_linear_component__WEBPACK_IMPORTED_MODULE_4__["LinearComponent"] },
             { path: 'radial', component: _components_gradient_generator_radial_radial_component__WEBPACK_IMPORTED_MODULE_5__["RadialComponent"] }
         ]
