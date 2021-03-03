@@ -1,7 +1,7 @@
 .information {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     left: 0;
     top: 0;
     background: rgba(238, 238, 238, 0.8);
@@ -10,7 +10,7 @@
         font-weight: 700;
         position: relative;
         color: #004d40;
-        top: 35%;
+        top: 32%;
         left: 5%;
         text-shadow: 1px 1px 3px #757575;
     }
@@ -18,7 +18,7 @@
         text-align: center;
         position: relative;
         left: 5%;
-        top: 38%;
+        top: 35%;
         font-size: 2.8em;
         color: #212121;
         animation: rotation 1.5s infinite linear;
