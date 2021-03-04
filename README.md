@@ -1,27 +1,43 @@
-# Angularapp
+## Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+This application is made to help the developer use some common CSS tools in one place. I made this application to improve my Angular and CSS skills, and also to help myself writting CSS files in the future. You can find the tools in the sidebar on left side of the screen. These tools are quite simple, but I think you will find it fairly useful. I certainly hope that this tool will help you save some time, and will make you feel this time was not wasted.
 
-## Development server
+![Application gradient tool](https://github.com/bartlomiejwyszecki/CSS-Application/blob/main/src/assets/readme.jpg)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Tools description
 
-## Code scaffolding
+At the moment there are only three tools, but I'm planning to add new ones in the future. Here is current tools description:
+-**Shape generator** - this tool helps to make some more unusual shape from div than simple square or rectangle. It lets developer create shapes like: circle, ellipse, egg, triangle, trapezoid, diamond, and many other shapes.
+-**Gradient generator** - as the name suggests, it makes a gradient of chosen colors, and rotation degree. This tool allows to use a maximum of 10 colors, radial or linear direction, and gradient transform properties.
+-**Banner generator** - have you ever seen a simple post on facebook, with a few words and some color or gradient in the background? This is exactly what this tool is made for. It also lets you download your effects of work.
+-**Typography** - a tool to check typography, while building a text content on website. Actually this component is in building, but you can check it anyway to see a simple animation and component preliminary draft.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies/tools used
 
-## Build
+-Angular v.11.0.4,
+-Typescript,
+-SCSS,
+-Bootstrap,
+-Fontawesome.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Installation
 
-## Running unit tests
+1. Download zip or clone repository,
+2. Navigate to folder with downloaded application in your terminal,
+3. Write command
+```
+npm install
+```
+and then
+```
+npm start
+```
+4. Your project will be running on localhost:4200 in web browser.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Online version on gh-pages
 
-## Running end-to-end tests
+To see the project, you can just click link below:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+[Gitub pages version](https://bartlomiejwyszecki.github.io/CSS-Application)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Enjoy yourself ;)
