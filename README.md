@@ -7,18 +7,18 @@ This application is made to help the developer use some common CSS tools in one 
 ## Tools description
 
 At the moment there are only three tools, but I'm planning to add new ones in the future. Here is current tools description:
--**Shape generator** - this tool helps to make some more unusual shape from div than simple square or rectangle. It lets developer create shapes like: circle, ellipse, egg, triangle, trapezoid, diamond, and many other shapes.
--**Gradient generator** - as the name suggests, it makes a gradient of chosen colors, and rotation degree. This tool allows to use a maximum of 10 colors, radial or linear direction, and gradient transform properties.
--**Banner generator** - have you ever seen a simple post on facebook, with a few words and some color or gradient in the background? This is exactly what this tool is made for. It also lets you download your effects of work.
--**Typography** - a tool to check typography, while building a text content on website. Actually this component is in building, but you can check it anyway to see a simple animation and component preliminary draft.
+* **Shape generator** - this tool helps to make some more unusual shape from div than simple square or rectangle. It lets developer create shapes like: circle, ellipse, egg, triangle, trapezoid, diamond, and many other shapes.
+* **Gradient generator** - as the name suggests, it makes a gradient of chosen colors, and rotation degree. This tool allows to use a maximum of 10 colors, radial or linear direction, and gradient transform properties.
+* **Banner generator** - have you ever seen a simple post on facebook, with a few words and some color or gradient in the background? This is exactly what this tool is made for. It also lets you download your effects of work.
+* **Typography** - a tool to check typography, while building a text content on website. Actually this component is **in building**, but you can check it anyway to see a simple animation and component preliminary draft.
 
 ## Technologies/tools used
 
--Angular v.11.0.4,
--Typescript,
--SCSS,
--Bootstrap,
--Fontawesome.
+* Angular v.11.0.4,
+* Typescript,
+* SCSS,
+* Bootstrap,
+* Fontawesome.
 
 ## Installation
 
