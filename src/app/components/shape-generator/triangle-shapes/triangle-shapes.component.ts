@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { COLORS } from './../../assets/colors';
+import { COLORS } from './../../../assets/colors';
 
 @Component({
   selector: 'app-triangle-shapes',
